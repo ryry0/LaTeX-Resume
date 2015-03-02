@@ -1,0 +1,195 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,letterpaper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75,margin=0.5in]{geometry}
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\textbf{++}}}
+
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Ryan - David}{Reyes}
+%\title{Resumé title}                               % optional, remove / comment the line if not wanted
+\address{3730 Swallowtail Trce}{Tallahassee, FL 32309}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{(850)~559~7516}                   % optional, remove / comment the line if not wanted
+\phone[fixed]{(850)~942~7230}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{rrr11b@my.fsu.edu}                               % optional, remove / comment the line if not wanted
+%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+%\cventry{June 2010--July 2010}{Job title}{National High Magnetic Field Laboratory}{City}{}{General description no longer than 1--2 lines.\newline{}%
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace{-15mm}
+\section{Education}
+\cventry{Fall 2011--Present}{Computer and Electrical Engineering}{Florida State University}{Tallahassee, FL}{\textit{GPA: 3.88}}{}  % arguments 3 to 6 can be left empty
+
+\section{Experience}
+\subsection{Research Assistant}
+\cventry{July 2012--Present}{Mechanical Engineering Department, CISCOR Robotics Lab}{Florida State University}{Tallahassee, FL}{}{ %\newline{}%
+%
+\begin{itemize}%
+	\item Created drivers for Inertial Measurement Units, Gamepads, TCP/IP, and Force Sensors on Windows, Linux, and QNX in \CPP.
+	\item Implemented Real-Time Linux Xenomai Framework on robots with comprehensive documentation.
+	\item Experience writing control systems with QNX Real-Time operating system (RTOS).
+  \item Project: GOLIATH - Gas Operated Land Intelligent All Terrain veHicle - Autonomous ATV designed for terrain classification.
+	\begin{itemize}
+		\item Created the control system that allows the user to drive the ATV via a Logitech Gamepad, communicating with the host system via TCP/IP for Windows, Linux, and QNX in \CPP.
+		%\item This program was created on Windows, Linux, and QNX platforms in \CPP.
+	\end{itemize}
+	\item \textbf{Honors Thesis}: Identification of the Inertial Parameters of Manipulator Payloads
+	\begin{itemize}
+		\item Concerned what motions a load bearing two-link manipulator can use to identify the inertial parameters of its payload.
+		\item Used to augment CISCOR Intelligent Planner - Sampling Based Model Predictive Optimization (SBMPO) Research.
+	\end{itemize}
+\end{itemize}
+}
+
+\subsection{Research Intern}
+\cventry{June 2013--August 2013}{}{National High Magnetic Field Laboratory}{Tallahassee, FL}{}{ Research Project: Determine whether magnetic materials can be used to remove metallic rods embedded in dental filling epoxy.%\newline{}%
+%
+\begin{itemize}%
+\item Analyzed the stresses and deformation of epoxy with a metallic rod inserted using ANSYS Finite Element Simulation Software.
+\item Used Vector Fields Opera software to do finite element analysis of the stress on metal rod
+due to magnetic fields.
+\end{itemize}}
+
+\subsection{OJT - On the Job Trainee}
+\cventry{July 2011--August 2011}{}{NNIT Philippines}{Makati City, Philippines}{}{Created Windows Powershell Script to administer Hyper-V Virtual Servers across the domain. %\newline{}%
+%
+\begin{itemize}%
+\item Script consisted of a daemon, a GUI front end, and a SQL Database.
+  \begin{itemize}%
+		\item The daemon automated the creation, run-times, archiving, and deletion of individual servers, using data in the SQL database.
+		\item GUI front end was created using the Windows Forms Powershell API, and interfaced with the daemon.
+  \end{itemize}
+\item This system is now deployed.
+\end{itemize}}
+
+\subsection{FSU Young Scholars Program Participant}
+\cventry{June 2010--July 2010}{One of 40 high school students statewide admitted to the program.}{National High Magnetic Field Laboratory}{Tallahassee, FL}{}{Main research project “Real Time Visualization of Electronic Motion in Magnetic Materials”%\newline{}%
+\begin{itemize}%
+\item Worked with a graduate student and professor to convert computational FORTRAN code to \CPP.
+  \begin{itemize}%
+		\item Graphically simulates a sea of electrons and their motion in metals, written in OPENGL.
+  \end{itemize}
+\item Featured in the following media releases:
+	\begin{itemize}
+		\item Tallahassee Democrat Newspaper
+		\item FSU Physics Website
+		\item NHMFL Media Center Press Release “Teen Scholars Bring Complex Physics Theory to Life.”
+	\end{itemize}
+\end{itemize}
+}
+
+\section{Qualifications and Awards}
+\cvitemwithcomment{Inducted to Phi Kappa Phi}{}{Spring 2013}
+\cvitemwithcomment{Recipient of Best and Brightest Award in Technology }{}{Leon County, Florida}
+\cvitemwithcomment{Selected Speaker}{UF 48th Junior Science, Engineering, and Humanities Symposium}{1/20 high school students selected.}
+\cvitemwithcomment{Eagle Scout - Boy Scouts of America}{}{Dec. 2009 }
+%
+%
+%\section{Computer skills}
+%\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
+%\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
+%\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+%
+%\section{Interests}
+%\cvitem{hobby 1}{Description}
+%\cvitem{hobby 2}{Description}
+%\cvitem{hobby 3}{Description}
+%
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+%
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
+%\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
+%
+%\section{References}
+%\begin{cvcolumns}
+%  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+%  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+%  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+%\end{cvcolumns}
+%
+%% Publications from a BibTeX file without multibib
+%%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+%
+%% Publications from a BibTeX file using the multibib package
+%%\section{Publications}
+%%\nocitebook{book1,book2}
+%%\bibliographystylebook{plain}
+%%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%%\nocitemisc{misc1,misc2,misc3}
+%%\bibliographystylemisc{plain}
+%%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+%
+%\clearpage
+%%-----       letter       ---------------------------------------------------------
+%% recipient data
+%\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+%\date{January 01, 1984}
+%\opening{Dear Sir or Madam,}
+%\closing{Yours faithfully,}
+%\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+%\makelettertitle
+%
+%%Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+%
+%%Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+%
+%%Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+%
+%Albert Einstein discovered that $e=mc^2$ in 1905.
+%
+%\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
+%
+%\makeletterclosing
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.

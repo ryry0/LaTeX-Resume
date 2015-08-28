@@ -1,0 +1,1 @@
+This repository holds the LaTeX files used to generate my resume.

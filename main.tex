@@ -49,7 +49,7 @@
 % personal data
 \name{Ryan - David}{Reyes}
 %\title{Resumé title}                               % optional, remove / comment the line if not wanted
-\address{2040 Stearns Rd}{Cleveland, OH 44106}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\address{2040 Stearns Rd Apt 42}{Cleveland, OH 44106}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \phone[mobile]{(850)~559~7516}                   % optional, remove / comment the line if not wanted
 \phone[fixed]{(850)~942~7230}                    % optional, remove / comment the line if not wanted
 %\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
@@ -100,22 +100,32 @@
         OH}{}{ %\newline{}%
 %
 \begin{itemize}%
-       \item Created Inertial Measurement Unit driver for Arduino based microcontroller
-       \item Developed firmware in C for Motorized Hybrid Neuroprosthesis - an exoskeleton which combines functional electrical stimulation (FES) with a motorized exoskeleton.       
-       \item Development of algorithms to control stimulated muscles and motors in tandem.
+       \item \textbf{Thesis Project}: Motorized Hybrid Neuroprosthesis - a
+               device for persons with paraplegia which combines functional electrical stimulation (FES) of
+                their muscles with a motorized exoskeleton to restore their
+                ability to walk.       
+       \begin{itemize}
+               \item Designed and implemented the firmware of the exoskeleton in C.
+               \item Developed a web-based real-time user interface for the exoskeleton
+                       with Javascript, Node.js and Socket.IO with a Raspberry Pi.
+               \item Development of algorithms to control stimulated muscles and motors in tandem.
+               \item Created Inertial Measurement Unit driver for Arduino based microcontroller
        %\item Experience using CAN Bus/Intel Edison/and Cypress PSoC technologies.                
-       \item Developed a web-based real-time user interface for the exoskeleton
-               with Javascript, Node.js and Socket.IO with a Raspberry Pi.
+       \end{itemize}
        %\item Experience with Vicon Motion Capture Systems, MATLAB, Simulink, and xPC-Target software.
 %       \item Experience with Biodex system fot data a
        %\item Experience with QT for writing GUIs
+       \item Worked with a mechanical engineer to create an
+               \href{https://drive.google.com/open?id=1fau5PRHl1aqsloEmuvL25a1HfinOWJ7S}{\myuline{origami-inspired
+                folding quadcopter}} for the class \textit{EMAE 488:
+                Advanced Robotics}.
        \item Non-degree related: 
        \begin {itemize}
-               \item Created a matrix library for the Elm programming language and released it as open
-                       source:
+               \item Created an open source matrix library for the Elm programming language:
                        \href{https://package.elm-lang.org/packages/ryry0/elm-numeric/latest/Matrix}{\myuline{elm-numeric}}.
-               \item Submitted a
-                       \href{https://bitbucket.org/atmind/blender-compositor-2016/commits/84141f27a6685e5823213728ea343722870209a0}{\myuline{patch}} to 3d modeling software Blender, concerned
+               \item Contributed to Blender, the open source 3D modeling
+                       software. The 
+                       \href{https://bitbucket.org/atmind/blender-compositor-2016/commits/84141f27a6685e5823213728ea343722870209a0}{\myuline{patch}} concerned
                        rewriting OpenGL 2 dependent API with an OpenGL 3 shader-based
                         library.               
         \end{itemize}
@@ -127,14 +137,19 @@
         retreat}{The Recurse Center}{New York City, NY}{}{ %\newline{}%
 %
 \begin{itemize}%
-	\item Wrote a Deep Neural Network Implementation in C, capable of
-	        multithreading to increase computation speed.
-        \item Worked in a group to implement the LZW compression algorithm in C.
-        \item Designed and built a quadcopter from scratch. Programmed the
+        \item Wrote a
+                \href{https://github.com/ryry0/C-Neural-Network/tree/threaded}{\myuline{Deep Neural Network Implementation}} in C, capable of
+	        running in low-memory environments such as on a microcontroller,
+	        or multithreading for high performance.
+        \item Worked in a group to implement the
+                \href{https://github.com/ryry0/LZW}{\myuline{LZW}} compression algorithm in C.
+        \item Designed and built a
+                \href{https://github.com/ryry0/Drone}{\myuline{quadcopter}} from scratch. Programmed the
                 control algorithms for stability, using techniques such as PID
                 control and complementary digital filters.
         \item Built an Arduino board equivalent using a bare Atmega328P.
-        \item Created a website with visualizations in Elm and WebGL. Rendered
+        \item Created a
+                \href{http://ryry0.github.io/Webgl-sketches/}{\myuline{website}} with visualizations in Elm and WebGL. Rendered
                 fractals and strange attractors, and experimented with signed
                 distance fields.
 \end{itemize}
@@ -181,12 +196,15 @@
 	\item Created drivers for Inertial Measurement Units, Gamepads, TCP/IP, and Force Sensors on Windows, Linux, and QNX in \CPP.
 	\item Implemented Real-Time Linux Xenomai Framework on robots with comprehensive documentation.
 	\item Experience writing control systems with QNX Real-Time operating system (RTOS).
-  \item Project: GOLIATH - Gas Operated Land Intelligent All Terrain veHicle - Autonomous ATV designed for terrain classification.
+        \item Project:
+                \href{https://www.youtube.com/watch?v=qEQv-tZcBTE}{\myuline{GOLIATH}} - Gas Operated Land Intelligent All Terrain veHicle - Autonomous ATV designed for terrain classification.
 	\begin{itemize}
-		\item Created the control system that allows the user to drive the ATV via a Logitech Gamepad, communicating with the host system via TCP/IP for Windows, Linux, and QNX in \CPP.
+		\item Designed the control system that allows the user to drive the ATV via a Logitech Gamepad, communicating with the host system via TCP/IP for Windows, Linux, and QNX in \CPP.
 		%\item This program was created on Windows, Linux, and QNX platforms in \CPP.
 	\end{itemize}
-	\item \textbf{Honors Thesis}: Identification of the Inertial Parameters of Manipulator Payloads
+\item \textbf{Honors Thesis}:
+        \href{https://diginole.lib.fsu.edu/islandora/object/fsu\%3A204853}{\myuline{Identification of the Inertial Parameters
+        of Manipulator Payloads}}
 	\begin{itemize}
 		\item Concerned what motions a load bearing two-link manipulator can use to identify the inertial parameters of its payload.
 		\item Used to augment CISCOR Intelligent Planner - Sampling Based Model Predictive Optimization (SBMPO) Research.

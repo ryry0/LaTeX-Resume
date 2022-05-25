@@ -51,10 +51,10 @@
 %\title{Resumé title}                               % optional, remove / comment the line if not wanted
 \address{2040 Stearns Rd Apt 42}{Cleveland, OH 44106}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \phone[mobile]{(850)~559~7516}                   % optional, remove / comment the line if not wanted
-\phone[fixed]{(850)~942~7230}                    % optional, remove / comment the line if not wanted
+%\phone[fixed]{(850)~942~7230}                    % optional, remove / comment the line if not wanted
 %\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
-\email{ryan-david.reyes@case.edu}                               % optional, remove / comment the line if not wanted
-%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+\email{ryan.david.reyes@gmail.com}                               % optional, remove / comment the line if not wanted
+\homepage{recu.rs}                         % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 %\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
@@ -76,12 +76,65 @@
 \makecvtitle
 \vspace{-15mm}
 \section{Education}
-\cventry{Fall 2016--Present}{PhD Candidate, Biomedical Engineering}{Case Western
+\cventry{Fall 2016--Spring 2021}{M.S. Biomedical Engineering}{Case Western
         Reserve University}{Cleveland, OH}{}{}  % arguments 3 to 6 can be left empty
 \cventry{Fall 2011--Spring 2015}{B.S. Computer Engineering and B.S. Electrical Engineering with Honors}{Florida State University}{Tallahassee, FL}{\textit{GPA: 3.83}}{}  % arguments 3 to 6 can be left empty
 
 \vspace{-4mm}
 \section{Experience}
+
+\subsection{Graduate Student, Research Assistant}
+\cventry{August 2016--May 2021}{Biomedical Engineering Department, Advanced
+        Platform Technology Center}{Case Western Reserve University}{Cleveland,
+        OH}{}{ %\newline{}%
+%
+\begin{itemize}%
+        \item \textbf{Masters Project}:
+                \href{https://docs.google.com/document/d/1UKP8v7TOPJ0dxbe0QPuSYQsmGhtdAXn1/edit?usp=sharing&ouid=112822739724919627200&rtpof=true&sd=true}{\myuline{Biologically Inspired Optimal Terminal
+               Iterative Learning Control for a Motorized Hybrid
+                Neuroprosthesis}} \\
+                - a device for persons with paraplegia which combines functional
+                electrical stimulation (FES) of their muscles with a motorized
+                exoskeleton to restore their ability to walk using learning
+                algorithms.
+       \begin{itemize}
+               \item Designed and implemented the firmware of the exoskeleton in
+                       C across multiple Teensy 3.6's communicating over CAN.
+               \item Developed a web-based real-time user interface for the exoskeleton
+                       with Javascript, Node.js and Socket.IO with a Raspberry Pi.
+               \item Development of algorithms to control stimulated muscles and
+                       motors in tandem using terminal iterative learning
+                       control.
+               %\item Created Inertial Measurement Unit driver for Arduino based microcontroller
+               \item Publication:
+                       \href{https://www.frontiersin.org/articles/10.3389/fnbot.2020.588950/full}{\myuline{Effect of Joint Friction Compensation on a ``Muscle First'' Motor-Assisted Hybrid Neuroprosthesis}}
+               \item Publications as co-author:
+                       \begin{itemize}
+                               \item \href{https://ieeexplore.ieee.org/abstract/document/8333294}{\myuline{Embedded control system for stimulation-driven exoskeleton}}
+                               \item \href{https://www.mdpi.com/2306-5354/9/2/71}{\myuline{Biologically Inspired Optimal Terminal Iterative Learning Control: A Modeling Study}}
+                               \item \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8716811/}{\myuline{Adaptation Strategies for Personalized Gait Neuroprosthetics}}
+                       \end{itemize}
+%
+       \end{itemize}
+%       %\item Experience with Vicon Motion Capture Systems, MATLAB, Simulink, and xPC-Target software.
+%%       \item Experience with Biodex system fot data a
+       \item Worked with a mechanical engineer to create an
+               \href{https://drive.google.com/open?id=1fau5PRHl1aqsloEmuvL25a1HfinOWJ7S}{\myuline{origami-inspired
+                folding quadcopter}} for the class \textit{EMAE 488:
+                Advanced Robotics}.
+       \item Non-degree related: 
+       \begin {itemize}
+               \item Created an open source linear algebra library for the Elm programming language:
+                       \href{https://package.elm-lang.org/packages/ryry0/elm-numeric/latest/Matrix}{\myuline{elm-numeric}}.
+               \item Contributed to Blender, the open source 3D modeling
+                       software. The 
+                       \href{https://bitbucket.org/atmind/blender-compositor-2016/commits/84141f27a6685e5823213728ea343722870209a0}{\myuline{patch}} concerned
+                       rewriting OpenGL 2 dependent API with an OpenGL 3 shader-based
+                        library.               
+        \end{itemize}
+\end{itemize}
+}
+
 \subsection{Biomedical Engineering IT Support}
 \cventry{Nov 2017--Dec 2019}{Biomedical Engineering Department, Advanced
         Platform Technology Center}{Case Western Reserve University, Louis Stokes VA}{Cleveland,
@@ -90,49 +143,6 @@
 		\item General technical support for Researchers ranging from email administration to solving computer hardware issues.
         \item Management of MATLAB License Servers
         \item Management of Remote Linux (Rocks Distribution) Computing Clusters
-\end{itemize}
-}
-
-
-\subsection{Graduate Student, Research Assistant}
-\cventry{August 2016--Present}{Biomedical Engineering Department, Advanced
-        Platform Technology Center}{Case Western Reserve University}{Cleveland,
-        OH}{}{ %\newline{}%
-%
-\begin{itemize}%
-       \item \textbf{Thesis Project}: Motorized Hybrid Neuroprosthesis - a
-               device for persons with paraplegia which combines functional electrical stimulation (FES) of
-                their muscles with a motorized exoskeleton to restore their
-                ability to walk.       
-       \begin{itemize}
-               \item Designed and implemented the firmware of the exoskeleton in C.
-               \item Developed a web-based real-time user interface for the exoskeleton
-                       with Javascript, Node.js and Socket.IO with a Raspberry Pi.
-               \item Development of algorithms to control stimulated muscles and motors in tandem.
-               \item Created Inertial Measurement Unit driver for Arduino based microcontroller
-               \item Publication:
-                       \href{https://www.frontiersin.org/articles/10.3389/fnbot.2020.588950/full}{\myuline{Effect of Joint Friction
-                       Compensation on a ``Muscle First'' Motor-Assisted Hybrid
-                       Neuroprosthesis}}
-       %\item Experience using CAN Bus/Intel Edison/and Cypress PSoC technologies.                
-       \end{itemize}
-       %\item Experience with Vicon Motion Capture Systems, MATLAB, Simulink, and xPC-Target software.
-%       \item Experience with Biodex system fot data a
-       %\item Experience with QT for writing GUIs
-       \item Worked with a mechanical engineer to create an
-               \href{https://drive.google.com/open?id=1fau5PRHl1aqsloEmuvL25a1HfinOWJ7S}{\myuline{origami-inspired
-                folding quadcopter}} for the class \textit{EMAE 488:
-                Advanced Robotics}.
-       \item Non-degree related: 
-       \begin {itemize}
-               \item Created an open source matrix library for the Elm programming language:
-                       \href{https://package.elm-lang.org/packages/ryry0/elm-numeric/latest/Matrix}{\myuline{elm-numeric}}.
-               \item Contributed to Blender, the open source 3D modeling
-                       software. The 
-                       \href{https://bitbucket.org/atmind/blender-compositor-2016/commits/84141f27a6685e5823213728ea343722870209a0}{\myuline{patch}} concerned
-                       rewriting OpenGL 2 dependent API with an OpenGL 3 shader-based
-                        library.               
-        \end{itemize}
 \end{itemize}
 }
 
@@ -257,10 +267,12 @@
 
 \vspace{-4mm}
 \section{Qualifications and Awards}
+\cvitemwithcomment{Outstanding Master's Work Award in
+the CWRU Biomedical Engineering Department}{}{Spring 2021}
 \cvitemwithcomment{Recipient of NIH T32 Training Grant}{}{Fall 2016}
 \cvitemwithcomment{NSF Graduate Research Fellowship Program (GRFP) Honorable Mention}{}{Spring 2015}
-\cvitemwithcomment{Inducted to Phi Kappa Phi Honor Society}{}{Spring 2013}
-\cvitemwithcomment{Recipient of Best and Brightest Award in Technology}{}{Spring 2011}
+%\cvitemwithcomment{Inducted to Phi Kappa Phi Honor Society}{}{Spring 2013}
+%\cvitemwithcomment{Recipient of Best and Brightest Award in Technology}{}{Spring 2011}
 %\cvitemwithcomment{Selected Speaker}{UF 48th Junior Science, Engineering, and Humanities Symposium}{1/20 high school students selected.}
 \cvitemwithcomment{Eagle Scout - Boy Scouts of America}{}{Dec. 2009 }
 %

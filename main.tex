@@ -54,7 +54,7 @@
 %\phone[fixed]{(850)~942~7230}                    % optional, remove / comment the line if not wanted
 %\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
 \email{ryan.david.reyes@gmail.com}                               % optional, remove / comment the line if not wanted
-\homepage{recu.rs}                         % optional, remove / comment the line if not wanted
+\homepage{recu.rs/ion}                         % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 %\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
@@ -74,68 +74,78 @@
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
-\vspace{-15mm}
-\section{Education}
-\cventry{Fall 2016--Spring 2021}{M.S. Biomedical Engineering}{Case Western
-        Reserve University}{Cleveland, OH}{}{}  % arguments 3 to 6 can be left empty
-\cventry{Fall 2011--Spring 2015}{B.S. Computer Engineering and B.S. Electrical Engineering with Honors}{Florida State University}{Tallahassee, FL}{\textit{GPA: 3.83}}{}  % arguments 3 to 6 can be left empty
+\vspace{-16mm}
 
-\vspace{-4mm}
+\section{About me}
+\textbf{Robotics/controls engineer} — I build and teach full-stack robotics systems: from PCB/motor drivers to distributed real-time control to web dashboards. Background in neuroprosthetics, robotics, and FPGA-based instrumentation.
+
+\vspace{-2mm}
 \section{Experience}
 
-\subsection{Graduate Student, Research Assistant}
+\subsection{Contract FPGA / Digital Systems Engineer — MAGResDIO Multifunction Card}
+\cventry{Feb 2024--Present}{Company specialized in building precision NMR spectrometers for superconductivity research}{MAGRes LLC}{Remote/Tallahassee, FL}{}{ %\newline{}%
+\vspace{1mm}
+        Custom NMR spectrometer board development (Artix-7 A35T)
+        \begin{itemize}
+                \item \textbf{Designed and implemented full Verilog system} for deterministic 32-channel digital output controller with 10 ns timing resolution, including custom opcode architecture and execution engine.
+                \item \textbf{Built hardware-in-the-loop simulation} flow using Verilator for cycle-accurate verification and timing closure.
+                \item \textbf{Developed C++ DLL interface} (Windows) for control and waveform programming; supported PCIe via SPI bridge to WCH controller.
+                \item \textbf{Reverse-engineered} Xilinx Vivado bitstream programming path to create a field-upgradeable firmware solution without Vivado dependency.
+                \item \textbf{Integrated optional AD9915 DDS} for synchronized 0–800 MHz analog waveform generation via custom opcodes.
+                \item \textbf{Authored complete opcode set }and instruction formats (NOP, WAIT, LOOP, JUMP, SET DDS, etc.) to support arbitrary waveform sequencing and register-based flow control.
+        \end{itemize}
+}
 
-
+\subsection{Master's Research - Hybrid Exoskeleton Neuroprosthesis}
 \cventry{August 2016--May 2021}{Biomedical Engineering Department, Advanced
         Platform Technology Center}{Case Western Reserve University}{Cleveland,
         OH}{}{ %\newline{}%
-%
+\vspace{1mm}
+Worked on a exoskeleton for persons with paraplegia that combines motorized assistance with neuromuscular stimulation to restore walking.
 \begin{itemize}%
+       \item \textbf{Architected and deployed a distributed embedded
+               control system}: coordinated 4 Teensy MCUs and a hybrid
+               FPGA/MCU over CAN bus with real-time scheduling.
+       \item \textbf{Delivered full-stack telemetry and control}:
+               implemented data logging WiFi access point with RPI0, and
+               a responsive Node.js dashboard streaming real-time
+               biomechanical and neural data with visualization to any
+               device.
+       \item \textbf{Implemented advanced control algorithms}
+               such as cascaded PID loops with friction and gravity
+               compensation.
+       \item \textbf{Development of novel algorithms} to control stimulated muscles and
+               motors in tandem using terminal iterative learning
+               control.
         \item \textbf{Masters Project}:
                 \href{https://raw.githubusercontent.com/ryry0/LaTeX-Resume/master/reyes-biotilc.pdf}{\myuline{Biologically Inspired Optimal Terminal
                Iterative Learning Control for a Motorized Hybrid
-                Neuroprosthesis}} \\
-                - a device for persons with paraplegia which combines functional
-                electrical stimulation (FES) of their muscles with a motorized
-                exoskeleton to restore their ability to walk using learning
-                algorithms.
-       \begin{itemize}
-               \item Designed and implemented the firmware of the exoskeleton in
-                       C across multiple Teensy 3.6's communicating over CAN.
-               \item Developed a web-based real-time user interface for the exoskeleton
-                       with Javascript, Node.js and Socket.IO with a Raspberry Pi.
-               \item Development of algorithms to control stimulated muscles and
-                       motors in tandem using terminal iterative learning
-                       control.
-               %\item Created Inertial Measurement Unit driver for Arduino based microcontroller
-               \item Publication:
-                       \href{https://www.frontiersin.org/articles/10.3389/fnbot.2020.588950/full}{\myuline{Effect of Joint Friction Compensation on a ``Muscle First'' Motor-Assisted Hybrid Neuroprosthesis}}
-               \item Publications as co-author:
-                       \begin{itemize}
-                               \item \href{https://ieeexplore.ieee.org/abstract/document/8333294}{\myuline{Embedded control system for stimulation-driven exoskeleton}}
-                               \item \href{https://www.mdpi.com/2306-5354/9/2/71}{\myuline{Biologically Inspired Optimal Terminal Iterative Learning Control: A Modeling Study}}
-                               \item \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8716811/}{\myuline{Adaptation Strategies for Personalized Gait Neuroprosthetics}}
-                       \end{itemize}
-%
-       \end{itemize}
+        Neuroprosthesis}}
+        \item \textbf{Publications:}
+               \href{https://www.frontiersin.org/articles/10.3389/fnbot.2020.588950/full}{\myuline{1}}, as co-author:
+                               \href{https://ieeexplore.ieee.org/abstract/document/8333294}{\myuline{1}},
+                               \href{https://www.mdpi.com/2306-5354/9/2/71}{\myuline{2}},
+                               \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8716811/}{\myuline{3}}.
 %       %\item Experience with Vicon Motion Capture Systems, MATLAB, Simulink, and xPC-Target software.
 %%       \item Experience with Biodex system fot data a
-       \item Worked with a mechanical engineer to create an
-               \href{https://raw.githubusercontent.com/ryry0/LaTeX-Resume/master/reyes-origami-quad.pdf}{\myuline{origami-inspired
-                folding quadcopter}} for the class \textit{EMAE 488:
-                Advanced Robotics}.
-       \item Non-degree related: 
-       \begin {itemize}
-               \item Created an open source linear algebra library for the Elm programming language:
-                       \href{https://package.elm-lang.org/packages/ryry0/elm-numeric/latest/Matrix}{\myuline{elm-numeric}}.
-               \item Contributed to Blender, the open source 3D modeling
-                       software. The 
-                       \href{https://github.com/blender/blender/commit/84141f27a6685e5823213728ea343722870209a0}{\myuline{patch}} concerned
-                       rewriting OpenGL 2 dependent API with an OpenGL 3 shader-based
-                        library.               
-        \end{itemize}
 \end{itemize}
 }
+
+\subsection{Additional Experience}
+\cventry{}{ }{}{}{}{ %\newline{}%
+\vspace{-10mm}
+\begin{itemize}
+\item Co-developed an
+       \href{https://raw.githubusercontent.com/ryry0/LaTeX-Resume/master/reyes-origami-quad.pdf}{\myuline{origami-inspired
+        folding quadcopter}} for the class \textit{EMAE 488: Advanced Robotics}.
+\item Created an \textbf{open source linear algebra library} for the Elm programming language:
+       \href{https://package.elm-lang.org/packages/ryry0/elm-numeric/latest/Matrix}{\myuline{elm-numeric}}.
+\item \href{https://github.com/blender/blender/commit/84141f27a6685e5823213728ea343722870209a0}{\myuline{Contributed}} to Blender, the open source 3D modeling
+       software. 
+\item \textbf{Instruction and Mentorship}: One-on-one tutoring in robotics, controls, and embedded systems (high school to graduate level). 
+\end{itemize}
+}
+
 
 %\subsection{Biomedical Engineering IT Support}
 %\cventry{Nov 2017--Dec 2019}{Biomedical Engineering Department, Advanced
@@ -147,7 +157,6 @@
 %        \item Management of Remote Linux (Rocks Distribution) Computing Clusters
 %\end{itemize}
 %}
-
 %\subsection{Recurse Center Participant}
 %\cventry{February 2016--April 2016}{3 month self-directed programming
 %        retreat}{The Recurse Center}{New York City, NY}{}{ %\newline{}%
@@ -205,28 +214,28 @@
 %\end{itemize}
 %}
 
-\subsection{Research Assistant}
-\cventry{July 2012--August 2014}{Mechanical Engineering Department, CISCOR Robotics Lab}{Florida State University}{Tallahassee, FL}{}{ %\newline{}%
-%
-\begin{itemize}%
-	\item Created drivers for Inertial Measurement Units, Gamepads, TCP/IP, and Force Sensors on Windows, Linux, and QNX in \CPP.
-	\item Implemented Real-Time Linux Xenomai Framework on robots with comprehensive documentation.
-	\item Experience writing control systems with QNX Real-Time operating system (RTOS).
-        \item Project:
-                \href{https://www.youtube.com/watch?v=qEQv-tZcBTE}{\myuline{GOLIATH}} - Gas Operated Land Intelligent All Terrain veHicle - Autonomous ATV designed for terrain classification.
-	\begin{itemize}
-		\item Designed the control system that allows the user to drive the ATV via a Logitech Gamepad, communicating with the host system via TCP/IP for Windows, Linux, and QNX in \CPP.
-		%\item This program was created on Windows, Linux, and QNX platforms in \CPP.
-	\end{itemize}
-\item \textbf{Honors Thesis}:
-        \href{https://diginole.lib.fsu.edu/islandora/object/fsu\%3A204853}{\myuline{Identification of the Inertial Parameters
-        of Manipulator Payloads}}
-	\begin{itemize}
-		\item Concerned what motions a load bearing two-link manipulator can use to identify the inertial parameters of its payload.
-		\item Used to augment CISCOR Intelligent Planner - Sampling Based Model Predictive Optimization (SBMPO) Research.
-	\end{itemize}
-\end{itemize}
-}
+%\subsection{Research Assistant}
+%\cventry{July 2012--August 2014}{Mechanical Engineering Department, CISCOR Robotics Lab}{Florida State University}{Tallahassee, FL}{}{ %\newline{}%
+%%
+%\begin{itemize}%
+%	\item Created drivers for Inertial Measurement Units, Gamepads, TCP/IP, and Force Sensors on Windows, Linux, and QNX in \CPP.
+%	\item Implemented Real-Time Linux Xenomai Framework on robots with comprehensive documentation.
+%	\item Experience writing control systems with QNX Real-Time operating system (RTOS).
+%        \item Project:
+%                \href{https://www.youtube.com/watch?v=qEQv-tZcBTE}{\myuline{GOLIATH}} - Gas Operated Land Intelligent All Terrain veHicle - Autonomous ATV designed for terrain classification.
+%	\begin{itemize}
+%		\item Designed the control system that allows the user to drive the ATV via a Logitech Gamepad, communicating with the host system via TCP/IP for Windows, Linux, and QNX in \CPP.
+%		%\item This program was created on Windows, Linux, and QNX platforms in \CPP.
+%	\end{itemize}
+%\item \textbf{Honors Thesis}:
+%        \href{https://diginole.lib.fsu.edu/islandora/object/fsu\%3A204853}{\myuline{Identification of the Inertial Parameters
+%        of Manipulator Payloads}}
+%	\begin{itemize}
+%		\item Concerned what motions a load bearing two-link manipulator can use to identify the inertial parameters of its payload.
+%		\item Used to augment CISCOR Intelligent Planner - Sampling Based Model Predictive Optimization (SBMPO) Research.
+%	\end{itemize}
+%\end{itemize}
+%}
 
 %\subsection{Research Intern}
 %\cventry{June 2013--August 2013}{}{National High Magnetic Field Laboratory}{Tallahassee, FL}{}{ Research Project: Determine whether magnetic materials can be used to remove metallic rods embedded in dental filling epoxy.%\newline{}%
@@ -268,6 +277,15 @@
 %}
 
 \vspace{-4mm}
+
+\section{Education}
+\cventry{Fall 2022--Summer 2025}{Diploma in Chinese Medicine and
+Acupuncture}{Xian Tian College of Chinese Medicine}{Manchester, UK}{}{}  % arguments 3 to 6 can be left empty
+\cventry{Fall 2016--Spring 2021}{M.S. Biomedical Engineering, with focus in
+        Neural Engineering}{Case Western
+        Reserve University}{Cleveland, OH}{}{}  % arguments 3 to 6 can be left empty
+\cventry{Fall 2011--Spring 2015}{B.S. Computer Engineering and B.S. Electrical Engineering with Honors}{Florida State University}{Tallahassee, FL}{\textit{GPA: 3.83}}{}  % arguments 3 to 6 can be left empty
+
 \section{Qualifications and Awards}
 \cvitemwithcomment{Outstanding Master's Work Award in
 the CWRU Biomedical Engineering Department}{}{Spring 2021}
@@ -276,7 +294,7 @@ the CWRU Biomedical Engineering Department}{}{Spring 2021}
 %\cvitemwithcomment{Inducted to Phi Kappa Phi Honor Society}{}{Spring 2013}
 %\cvitemwithcomment{Recipient of Best and Brightest Award in Technology}{}{Spring 2011}
 %\cvitemwithcomment{Selected Speaker}{UF 48th Junior Science, Engineering, and Humanities Symposium}{1/20 high school students selected.}
-\cvitemwithcomment{Eagle Scout - Boy Scouts of America}{}{Dec. 2009 }
+%\cvitemwithcomment{Eagle Scout - Boy Scouts of America}{}{Dec. 2009 }
 %
 %
 %\section{Computer skills}
